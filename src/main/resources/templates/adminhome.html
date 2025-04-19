@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <style>
+		
+		/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 50px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
+
+		
+	</style>
+    
+</head>
+
+
+
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+           
+		    <li><a href="/urequest"><i class="fas fa-users"></i>User Requests</a></li>
+                 <li><a href="/viewrequest"><i class="fas fa-users"></i>Doctor Requests</a></li>
+                  <li><a href="/srequest"><i class="fas fa-users"></i>Surgeon Requests</a></li>
+                   <li><a href="/rrequest"><i class="fas fa-users"></i>Radiologist Requests</a></li>
+                     <li><a href="/prequest"><i class="fas fa-users"></i>Pharmacy Requests</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+            <li><a href="adminlogin"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Users</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+        <div class="main-content">
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Users</h3>
+                    <p>#</p>
+                </div>
+                <div class="card">
+                    <h3>Active Users</h3>
+                    <p>#</p>
+                </div>
+                <div class="card">
+                    <h3>Inactive Users</h3>
+                    <p>#</p>
+                </div>
+            </div>
+            <div class="charts">
+                 Placeholder for charts or additional content 
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

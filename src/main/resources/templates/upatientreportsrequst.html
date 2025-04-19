@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Reports</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure the path is correct -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<style>
+
+
+/* Reset some default styles */
+body, h2, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+/* Action link styling */
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* No data styling */
+.no-data {
+    text-align: center;
+    color: #ff0000;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Reports</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Email</th>
+                    <th>Description</th>
+                    <th>Document Name</th>
+                    <th>Document ID</th>
+                    <th>Document Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Check if patientreports is not empty and iterate over it -->
+                <tr th:each="request : ${patientreports}">
+                    <td th:text="${request.patientid}"></td>
+                    <td th:text="${request.email}"></td>
+                    <td th:text="${request.msg}"></td>
+                    <td th:text="${request.docName}"></td>
+                    <td th:text="${request.docId}"></td>
+                    <td th:text="${request.docType}"></td>
+                    <td>
+                        <a th:href="@{'/upopupredirect?id=' + ${request.id} + '&patientid=' + ${request.patientid} + '&email=' + ${request.email} + '&msg=' + ${request.msg} + '&docId=' + ${request.docId}}" class="action-link">Request</a>
+                    </td>
+                </tr>
+                
+                <!-- Display a row when there are no patient reports -->
+                <tr th:if="${#lists.isEmpty(patientreports)}">
+                    <td colspan="7" style="text-align: center; color: red;">No patient reports available.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Doctors</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="C:\Users\saura\Downloads\fabicon-removebg-preview (2).png">
+   <body>
+  <!-- Header -->
+    <header>
+       
+        <div class="motto"><b>Welcome</b></div>
+        <div class="slideshow">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdji1931PbuaaeOzkiWxZwCP0Y-l4Xi1WwR1sD38DAMHght4-40fDGDgm8uf3LQa0zNBU&usqp=CAU" alt="Image 1">
+            <img src="https://t3.ftcdn.net/jpg/05/65/55/96/360_F_565559600_YuYjetRZf0xO4hEzElmYPtWXI7bdpXeE.jpg" alt="Image 2">
+            <img src="https://plus.unsplash.com/premium_photo-1674841252366-162fc9b8f983?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+			<img src="https://plus.unsplash.com/premium_photo-1673351534430-f5dde7d87a60?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4">
+			<img src="https://plus.unsplash.com/premium_photo-1682141160157-d6a296a65574?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5">
+			<img src="https://plus.unsplash.com/premium_photo-1674499074438-8f611a3569f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 6">
+			<img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 7">
+			<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 8">
+			<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 9">
+			<img src="https://images.unsplash.com/photo-1578496479763-c21c718af028?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 10">
+			<img src="https://images.unsplash.com/photo-1543333995-a78aea2eee50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 11">
+			<img src="https://images.unsplash.com/photo-1582560469781-1965b9af903d?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 12">
+			<img src="https://plus.unsplash.com/premium_photo-1661779616524-1825ac40c9d6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 13">
+        </div>
+        
+			
+			 <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400%;
+            height: 100%;
+            display: flex;
+            animation: slideImages 60s linear infinite;
+        }
+
+        .slideshow img {
+            width: 25%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @keyframes slideImages {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .logo {
+            position: relative;
+            top: 20px;
+            left: 10px;
+            z-index: 1;
+        }
+
+        .logo img {
+            width: 400px; /* Adjust the width of the logo */
+            height: auto;
+            filter: brightness(150%); /* Increase brightness for better visibility */
+        }
+
+        .motto {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            color: #FFA500; /* Adjust color for better visibility */
+            font-size: 24px; /* Increase font size for better visibility */
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgb(0, 0, 0);	
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .main-content .left-column {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .main-content .right-column {
+            flex: 1;
+            max-width: 50%;
+            padding-left: 20px;
+        }
+		
+		/* Services Section Styles */
+/* Services Section Styles */
+.services {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.service {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.service-info {
+    padding: 20px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Feature Boxes */
+.feature-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Patient Reviews */
+.patient-reviews {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.patient-reviews h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.review p {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+	
+	
+	/* Founders Section Styles */
+.founders {
+    background-color: #f9f9f9; /* Background color similar to other sections */
+    color: #333; /* Text color similar to other sections */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.founder-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.founder {
+    flex: 1;
+    margin: 20px;
+    background-color: #fff; /* Background color for founder containers */
+    border-radius: 8px; /* Rounded corners for founder containers */
+    padding: 20px; /* Padding for founder containers */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for founder containers */
+}
+
+.founder img {
+    width: 200px; /* Adjust image size */
+    height: 200px; /* Adjust image size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.founder h3 {
+    margin-bottom: 10px;
+    color: #333; /* Text color for founder names */
+}
+
+.founder p {
+    font-style: italic;
+    color: #666; /* Text color for founder descriptions */
+}
+
+
+/* Styling for Contact Section */
+#contact {
+    background-color: #f9f9f9;
+    padding: 50px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea,
+#contact button,
+#contact input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus,
+#contact button:focus,
+#contact input[type="file"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+}
+
+#contact textarea {
+    resize: vertical; /* Allow vertical resize */
+}
+
+#contact button {
+    background-color: rgb(0, 128, 64);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: rgb(0, 64, 64);
+}
+
+/* Optional: Style file input to match other inputs */
+#contact input[type="file"] {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#contact input[type="file"]:hover {
+    background-color: #e9e9e9;
+}
+
+
+
+
+    </style>
+
+        
+        
+    </header>
+
+ <!--  Navigation -->
+    <nav>
+        <a href="/patientreportsrequstt">Surgeon</a>
+        <a href="/radiopatientreportsrequst">Radiologist</a>
+       
+         <a href="/pharmpatientreportsrequst">Pharmacy</a>
+              <a href="/userpatientreportsrequst">User</a>
+         
+        
+	
+
+
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="left-column">
+            <div class="feature-box">
+                <h2>Advanced Medical Technology</h2>
+                <p>Explore our state-of-the-art medical equipment and technology designed to provide the best healthcare experience.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Specialized Services</h2>
+                <p>From cardiology to neurology, we offer a wide range of specialized services delivered by expert physicians and staff.</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="feature-box">
+                <h2>Personalized Care</h2>
+                <p>Our team is committed to providing personalized care tailored to each patient's unique needs and preferences.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Community Engagement</h2>
+                <p>We actively engage with our community through health education programs, outreach initiatives, and more.</p>
+            </div>
+        </div>
+    </div>
+	<section id="services" class="services">
+    <center><h1>Our Services</h1></center>
+	<br>
+    <div class="service-container">
+        <!-- Doctor Services -->
+        <div class="service">
+            <div class="service-info">
+                <h2>For Doctors</h2>
+                <p><b>NirvanCare presents a transformative solution for doctors, revolutionizing patient care through advanced technology. By facilitating seamless communication, efficient appointment management, and access to comprehensive patient records, NirvanCare empowers doctors to deliver personalized care and build stronger relationships with their patients. With telemedicine capabilities and growth opportunities, NirvanCare enables doctors to expand their reach, enhance their practice, and embrace the future of healthcare delivery.</b>
+</p>
+            </div>
+            <a href="login.html" class="btn" >Learn More</a>
+        </div>
+        <!-- Patient Services -->
+        <div class="service">
+            <div class="service-info">
+                <h2>For Patient</h2>
+                <p><b>NirvanCare offers patients a groundbreaking platform designed to enhance their healthcare experience. Through intuitive interfaces and advanced features, patients can easily schedule appointments, access medical records, and engage in virtual consultations with healthcare providers from the comfort of their homes. With personalized health insights and educational resources, NirvanCare empowers patients to take control of their health journey, fostering a collaborative relationship between patients and healthcare .</b></p>
+            </div>
+            <a href="login2.html" class="btn" >Learn More</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Patient Reviews -->
+  <div class="patient-reviews">
+    <h2>Patient Reviews</h2>
+    <div class="review">
+        <img src="https://previews.123rf.com/images/rsapmech/rsapmech2007/rsapmech200701648/152438704-new-delhi-india-%E2%80%93-march-3-2020-man-portrait-smart-casual-man-confident-handsome-man-inside-hauz-khas.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Abhinav Sharma</strong>
+            <p>"The services provided by your website were excellent. The staff was courteous and the facilities were top-notch."</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="https://i.pinimg.com/736x/4b/1d/0b/4b1d0bf3dbeadc3238c323c6584c2ca7.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Sarvesh Kumar</strong>
+            <p>"I highly recommend your website to anyone seeking quality healthcare services. I was impressed with their professionalism and dedication."</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="https://previews.123rf.com/images/dinodia/dinodia1709/dinodia170902297/85732936-south-indian-man-with-tika-on-forehead-with-sandal-or-saffron-paste-with-black-grey-moustaches-and.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Ashok Iyer</strong>
+            <p>"Impressed by your website website, it guided me seamlessly to book my appointment. The staff's professionalism and the facility's quality left me thoroughly satisfied."</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="https://i.pinimg.com/236x/d5/98/c4/d598c4394ddf68f09dbd88e966102650.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Fatima Khan</strong>
+            <p>The services provided by your website were excellent.</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="https://c8.alamy.com/comp/BY9CCF/portrait-of-a-gujarati-man-BY9CCF.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Lalit Patel</strong>
+            <p>"Navigating through your website was a breeze, and the personalized care I received mirrored their online promises. Highly recommended for their efficient service and excellent facilities."</p>
+        </div>
+    </div>
+    <div class="review">
+        <img src="https://static.toiimg.com/thumb/imgsize-23456,msid-67915786,width-600,resizemode-4/67915786.jpg" alt="Patient Photo">
+        <div class="review-content">
+            <strong>Suresh Pawar</strong>
+            <p>"Booking with your website was simple thanks to their intuitive website. The level of care I received exceeded my expectations, and I left feeling confident in their expertise. A top-notch healthcare provider."</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Founders Section -->
+<section id="founders" class="founders">
+    <center><h1> Our Doctors</h1></center>
+    <br>
+    <div class="founder-container">
+        <!-- Founder 1 -->
+        <div class="founder">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqVOA4o6ryqDlQRuk9JCJae16oojo9BLFl-A&s" alt="Founder 1 Photo" class="founder-photo">
+            <div class="founder-info">
+                <h2>Saurabh Shinde</h2>
+                <p>Saurabh Shinde, hailing from <span style="color:red">Nashik</span>, is a skilled frontend developer renowned for his work on NirvanCare's interface. His educational journey began <span style="color:blue"> Wisdom High International</span>. Beyond coding, Saurabh finds passion in Mixed Martial Arts (MMA), where he showcases his dedication and discipline. His multifaceted talents, coupled with a relentless drive for excellence, position him as a valuable asset in both the tech and sports arenas.
+</p>
+				</div>
+        </div>
+        <!-- Founder 2 -->
+<div class="founder">
+    <img src="data:image/jpeg;base64,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" alt="Founder 2 photo" class="founder-photo">
+    <div class="founder-info">
+        <h2>Shreenath Kadam</h2>
+        <p>Shreenath Kadam, a native of <span style="color:red">Nashik</span> and alumni of <span style="color:blue">Wisdom High International</span>, is the adept backend developer behind NirvanCare's robust infrastructure. Proficient in various programming languages, Shreenath's expertise ensures seamless functionality and security of the platform. Beyond coding, he finds solace in the game of tennis, showcasing not only technical prowess but also a flair for sportsmanship.</p>
+		</div>
+</div>
+
+        <!-- Founder 3 -->
+        <div class="founder">
+            <img src="data:image/jpeg;base64,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" alt="Founder 3 Photo" class="founder-photo">
+            <div class="founder-info">
+                <h2>Om Nikam</h2>
+                <p>Om Nikam, also from <span style="color:red">Nashik</span> and a graduate of <span style="color:blue">Wisdom High International</span>, contributes significantly to NirvanCare's Data management. With adept skills in coding and problem-solving, Om ensures the platform's efficiency. Outside work, his love for food takes center stage, adding a delightful flavor to his personality. Om's dedication and technical prowess play a vital role in shaping NirvanCare's robust infrastructure.</p>
+               </div>
+        </div>
+        <!-- Founder 4 -->
+        <div class="founder">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAQEBAPDxAQDw8QEBAPDw8QEA0QFREWFhYWFRUYHSggGBolGxUVIjEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0lHyUtLS0tLS0uLS0tKy0tLS0tLS0tKy0tLS4tLS0tLS0tKy0tLS0rLS0tLS0tKy0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAABAgADBAYFBwj/xABCEAABBAAEAwUFAwkGBwAAAAABAAIDEQQSITEFQVEGEyJhcQcygZGxkqHRFCNCUlNUYqLBM4KT4fDxQ3JzdLKz0v/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACYRAQEAAgEDAwQDAQAAAAAAAAABAhEDEiExBEFREyJhkRQycUL/2gAMAwEAAhEDEQA/AOobCrWwq5rFa1i8+hQIk4iV4anDU0M4iTCJaA1MGpoZxCiIVqDUQ1XRtl7lN3C1BqYNV6U2yCBEQFbA1MGq9MTbGICj3VanQLYQALNADcnYLgO23bzDsZLh4DI+RzKEsYprb3ykjxac9lZhvwbdZLxOCMsDpYhmcW6yNFENJ16bFeBxLt/BC8tYx09HVzDlaR5OK+Ud62RgMZkY5tFwkN61723qqcTinZWuJID8zXNDraS0+ledea7zi+U3H1Ye0/CA+ODEMH6wEbgP5l0PBe0+CxmmHnY6TfuneCT7J1PwX58dMa02PKyapViSiHAlrgQQ5hILXAggjoQdbC39Oew/UICmVcP7PO3EeLa3D4iQDFAAAu8P5TWlj+KqsfELvaXKzQpyqZVdlQyoKMqUtV5CBCDOWpCxaS1KWqiuNiYtTtCJCooyoqylEV5bWqxrUwanDV5mihqcNRDU4CBQ1EBOAiArpChqYNTAJgFQgamATAJgFUKGpkwC5H2mcX/J8GYmvySYgOaDpWQVn+dgfFUcX7Qe3H5S84XCX3MbvzkrTf5Q4cm8soNa81yDpxK6pSS8aNc4MonpJlAP97z1tYr8QdtlIO9C/gFdLxBjnZpGB3Ui29Oi9OMkYvdvfEx2Ut0eB4S0UWkHUAg7egrXZeVjMQ/Mc9EEAGjd1z9UuKkYfFE8N6st2nSrG/oqTinG8/ivmfxC3aSFkbWoKVspH9Ut9PkgstNMZILXMOVwIIINFpGxBX3P2b9osTjIXnEU7I8MEjQBeg94ddRr5r4LG6l9D9l3aCOCV8T3ljZAKafcebA35O6dVMpuM3s+20hSdjgQCNiL9USFyVVSFKwhAhBUQlIVpCUhAoChCYBEhFV0omUQeeGpwEQEwC4NAAmARATAIAAiAiAmAVAATUpSYBVApEBEIgKiAL5P7Zcc8zwYZrQcsXfXvWZxbZ+yvrQXyH2tRsGLLzucLGCC4hrqe6jXpeiuPlK+a4sVTc2eul1rvSs4fwiWc+Bpr0Xp8A4K7E/nT7mYgHqRuvovDMA2JtNAHUrnz+q6Ptx8vTw8HVN5OLwnYl5rMK9V6cHYZn6Tj8F2TAjVrxfyOS+71fSwns5LGdgYauN7r8+a5rifZSaK3NBcBuNA75fpfBfVSCEkjA9pBANrpj6nkxrGXDhY+ISRVpz6VStw8mUh3Np2XqdrY+7xDmkVsdAvFvUH4HzC+thl1Yyvn5TVsfffZfx04rC5Hm3w031by+Wy7MhfHfYk8jEzRiyO4zuPLRwA/wDJfY1zymqzCpSE5QWVVlIVaQkKlWAAiQiFCFQlKJqUQYgEwCgCYBcWkARARARVERAUARRERUCKCAIqKKghfN/bZgLw8M7Wi2vcx7v0spaS0elgr6SF5/HuCxY2EwTZg0kG2mi0jn9Ul1do+M9lsc6Hh7HCJ0gEsxOXpmXp4bt3h9nsfGf4mFTg8cjOHtjw7mAmfFBssgIGQTvAdQ6ho+a57jvC5RNmD3mPwXneHSF1eKq0OvpuvPZhlnl1fL2Y9cxmn0PB8QilYHscHNPMLPjO0EEIJcSaNU0F1fJed2Qwzu7LZByHztYe02BkBcIhQ5nnqvNjJ16ei70td247x2SLDyvF0HbfcvX4ZjpH+/GW/X4rjMPweUyRugmPdU3vMzvGHX4suhHpa6vg3fsNPLHt0Ftc5w/m/ErtzTCT7dOXHMt93O+0vDUYpa3OQ/ULi2MsFfUe32G7zBuPNpa4fArn8B2fGJga7DsyyAtYAbzPkc2mmtfDnLdehK9HpuWY8c386cObjtytnxt2vsS4flgxGII1kcyIH+FgJNfF1f3V9LKx8I4czCwRwRgBsbQNBWZ36TvibK1r0W7ryolKZAqKCRwTpXKUgAIkKBEqqRFRRBkATAKUiuLSUmAQCKqCogiEBCKiiCIhBEKhgmCUJgiOFxPDmROdEz3GOcGitgXE18Lr4KgYCMG8jb9AvY7RDJMT+s0O/p/T715TZL1Xzc+2VfS4rvGaXYaIDYVZCMkIzagLG/jMbH5XHuyDTQ6vznmK/qqcJxvvpHt7oCMGmSCQFzjzttafMqzHs3W5uAhJzZG5v+UK44cdFR3mU+XJMMSFLlvtUs08/tPg3TQdyw06RzBZ2AzC/uteh2awmXFR5BTA1rAOoYN/lz9FmxOKABkcPDGHPPo0En6Lf7NuLx40TTRxSRiMtZclWSRZqrHTn9V24ccstSeJXDkzmMvzezuCgoovoPCiCiiAJSmQKzRAooFFVRRRRUZQmCARXJUUURQQIhQIoIooogiYIIhUFMEoTBEc12zi0ik6FzD53RH0K4vimKLCKzlpb/w2hxGu9Xr9V9L41ge/gfGNHe8wnYOG34fFfOmvyyBkoOYW03plI6/ReLnwsz6nr4Mu2nkPigk8VFxrNbpGMeKrXKdfmrIJooxTYpdABbHBxN89Fq4y50bTIxrDW4cS1Ts/iHS2XiLTk3MfqtS/bv2en7d69/8AFOHxczpG/mpmR6ZTK5lv1q6B0Xszurntuhj5m1vRNVyXnvmzH3iB66fNcrOq7Zt12aOLxOkw8zI9XSQSxtF1b5G5G6nbVy7nsVwEcPwUWHu3i3ym7BkcbdXkNh6LjeBYuN8wLxcYdGA2rs5xkP2qX04Fev0/bGx4+e7sRRRBehwRBRRBEpRQKlWCEUAikAUUUVGcKKKLk0KiiKIgRUCioiKCKCBMgEVREwShMEQVwXtLwGTusVG0kklkobvo22u9dF3q5/tlMGxR37plaHH9S7DT9qh8VnO6x21jO+nzRnGtPHr4bAIskV9Vph40BoC260bz2WfivBmE5g2j/BoP8vVeXJwzIKBcL31AvQc6XCXjr065G/FcTsCzV3pZ2tZ3zulGVttZpmddZjzHksUGFe92RgIBNEgEuf5DmV9D7O9mGx5XTjxBoLI60Yb/AEuRIu62C6an/Lne3fKreyvCMrWSOGUNosY6w4kj3z99LsG41rBT9KOUFY27A5iaAJvcjfWtBt96LYe90cKbre+o/wA1rDGxxyz6q9SGdr9W2R1qrVhVLGhoAAoAUB0CtXaoiihQUREpTJSpVhgilCKsEUUUQZ1FFFyaFFAIoCoooqiIoIqghFBFBEyUJgNLOgV0gryuMta62PDXMezI5rqIIJ10K9J0wG3w6lePxrGxQRvmmdlYxuZztdLOwHM+SzyTsscbxHByYUW65YAARLXiiHSTy/i+dLyGQPxL+6hBcTZJvRrepPIJsX20mkdljhdBA0HxlzXzvGw3trPjmW3sv2uijPdTYWPDRvJIljAy+sn/ANDTyAXOelu912nqtTTp+CcFiwoAAD5S2jJzB6DXwiufqvTijsVTqGtk6mj1PkU8cTaDRlAPi97Qgmwavoqp/CW6EudYZGD71DTU+60cyukxn4cMsrburGlznAXQcPdO5o0dOnn5+a9ONgAr5nqVlwOFLbc85pCACdg0D9Fo5D6rYSu2M1ERPHr9FTm/11V0Q0WtAkIK8N0SPjI81iw2rSFMkKwpwigEUVFFFFRnUQtFc1EKWogrA1o2kRXToZ2ZFIi1S46NnTsYT+KEbLK0DoExx2WlEYHmsc0mZ1ch956K/ESgNNa8viszGUK58/VdPCQCVy/brC94wNcLjdG+xdU4FmU+q6uIaLw+1uFdJ+ThpAqYZr2LcjtPPWlzs7bW+HyWKImmkag0d7BGhFLPxKQn80wW93hoVpQ1roKtexxbK2bEOjLWxh5oFvMAB1Ua961u9nXB24jPM8Z3mQsFi2ta2nc+t6+gXo6tY7cJO73PZ43ECBsDwZY2Ad24u1i3tp/g6DcV8u4gw4ZZ3c7dx+g6DyVmHgbGKFa6k1WY9Us0tEADM47Dp5noFy/NdpDhgu0HRN5i/iUzRW+pUWtCMbZWtjVTC1aGuVQ4VT5daGp+iE8h91u558mjqUjIzsNubjuVAXUSaqx8iqCtbWADl69VXKwHUf7rOWPwsqoIpQmtc2kRSooM6KCiwoqKJHFJdUOoq+8U7xdfqYpqrEzFUJFqwzdMx+CdUy7RPC+MUFRK7puVa52h+H0Cpbq70XRkRFsOmvxSuCvKpO6VVZ0HoV4/aqdscDpXbR04G612Feeq9lw3XL+0M1w6Y9HQj4GZizJu6W+HzIsLwb1zWTXvOcbOnxX1jsVwM4PDAPFSyeN7f2d7N9a38/Rct7PuEd7N3zhccFHbR8teEeg3+S+j582g269fRdLfZywnujidh8+iVkYH48yrdtkpWXQFGhFT8QqLVYTQSNUe/wC5ERoA1dueSLn9duQHNJXM6k7BOGczr5IAGl2p2Qe7xeQCdups7BZybs9UEJRSJguOXlsVEFFBQiEEQuaipSiKAZVMiKKaEbHa0uHL0CSNul9fohJJ4nDoWn7gu2GOozaj3aH/AFsa/BCMblV4k6PrfRw8+qcO0rzW0MXFTmhaFqgndeP2o4a7E4PFYdlZ5InCPMab3g8TLPIZgF7D0H6qDzuFcNbhoI4I/cYNTzld+k4+pXosFIJiqISg5C1KtAwSuOoHmn2VLD4h8VRpzULVbUs79gjrtzRFjXEnT59Ai7oFPdFDfmU8TOaASnK2uZWe00z7d5DRIVFAJkjUy5ZeWhUUUWRSiFT37eqYTN6hYa0tUVffDqFO+HUILU0bbP1VHfN6hbYW03zK3hN1m9hJ1VGLbTs3UC1a7ceqskrS/Rd2WGd9Bruhyn0OysSYmPRzeo0/olhkzNB6gKK0WgltQFBYTolBpKVWZNUF5PNISlFnVFAQi0qAqNPJBMyjWjdAtRAVFbRcjj+rTR61f9VpYK15/RZ8D4gXdXvPwDqH0WokDffoqyLQBqf91DKSD0Cru9SlzX5AbDr5oAkcnKrcpViNTqsKxccvLcRRRRZHygYvG/t2/YP4qxuMxn7Zn+GfxXlNwWI/b/yp24LEfvH8gXjm31NT8fp6gxuN/bM/wz+KIxmN/bM+wfxXmjBYn94/kCYYPE/tx9gLUTU/H6dX2UixM2Ib3sjXRMGd4DSM36ou+Z+4FfQHhc92J4a+HDB0js0kpzk1VM2aPlZ/vLoXHRe7ix6cXzebLeaqTl6pX8/mml2SF2o8wujmGINgOWOA1mb55h8d/vv5rTKaa4dFhZJ4vUKVY1gopGlOUDJDFraZMgFoKOQagWQWW61Ruuv+gsIuN7nkVm8RDaqgwk/G719Fsnw7X73s4AjcAiivNxWD8Yp7qa0DKayvrNo4dDmOnouVxu9xpudj2t9/wnJnIu6GYDpd2RyVUnEm5+71unctPDV6/ELFicSwWJGOa4MY4nUsprxlFnc6gkea83COMkz8rHWHuaCXuqj+ll2sm067PdZjuus4fJUMZ5ubfz1V7IydSjDDZs7DRo9Oa0OrZdnJmP3IFWvbSqKoQpCncq3FSrECdVsTrhl5bFRBRZHzcdlcR+8P+y38Ew7LYj94f9ln4Lv8qmULx/Svy9X8jJwY7L4j9u/7LPwTxdmZw4Zp3kWLGVuovXku6yqZVqcd+UvqMm6IhzaGlaUOQRY6tCscZIOi1Nfm8j9V9LHLbx2Hc1Z3behTtmI0KM1USFRkxD9D6Lw34wNcyz7zg356LZxTFhkbnEgADUk0AvnWM7QskkaWyxhkVvBc8DOWjl/T0UqvqEMlhaGnRc72f4o2dmZhzNIBBGvqvcgfdj4oLwdlYFRm931VwKBJBoUGHZNKdCq4zoqLCvOxb/Et5evKxWZznBrXOqjoCVBvweE74EkmhpQ0JPqtMOBji9yNrTd3qTfWysvDjIyIHI/ckgb79N1vwuL7wXWnmKTtTdI+R3UpGuN2tL2qvKrpNi51pShaBKqA4ql7k7ysmKmDQCeZpYzuptvGbamBOFnhlsLQF59tIooogpUUUXNUCiiisF3T0Csj3UUXrjnQm3+CV3ulRRaRx/bL+wZ/3GF/97Fr4V/aS/8AVP1UUWa3HXjZKFFFpgHKl6iiEVy7KuLZRRKGG63Yf3AookKDPe+CEnvBRRVFiocoogRAqKIK5Nl5PFeXqPoVFFw5/wCrrx/2WcP2C9NiKi5Y+Gs/IqKKKsv/2Q==" alt="Founder 4 Photo" class="founder-photo">
+            <div class="founder-info">
+                <h2>Vikas Chape</h2>
+                <p>Vikas Chape, hailing from <span style="color:blue">Aurangabad</span> (<span style="color:red">Chatrapati Sambhaji Nagar</span>), contributed significantly to NirvanCare. Proficient in mathematics, he played a pivotal role in its development. Engaged in various aspects of the project, his expertise elevated its quality. Beyond work, Vikas is passionate about social initiatives, dedicating time to community welfare. His commitment and skills have been invaluable, shaping NirvanCare's success.</p>
+				</div>
+        </div>
+    </div>
+</section>
+
+
+ <section id="contact">
+            <h2>Patient Report:</h2>
+            <form action="/submitpatinetreport" method="POST" enctype="multipart/form-data">
+                <input type="text" name="patientid" placeholder="Patient id" required>
+                <input type="email" name="patientemail" placeholder="Patient Email" required>
+                <input type="text" name="docId" placeholder="Document Id" required>
+                <textarea name="patientmsg" placeholder="Your Message" rows="4" required></textarea>
+                
+                
+                <input type="file" name="files" accept=".pdf" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </section>
+
+ 
+
+    <!-- Footer -->
+
+<footer>
+    <p>&copy; 2024 All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+

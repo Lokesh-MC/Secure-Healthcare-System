@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        /* Background image styling */
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?nature,water'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Navbar styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7); /* Transparent dark background */
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #f8f9fa !important; /* Lighter color for better visibility */
+        }
+
+        .navbar-nav .nav-link {
+            color: #f8f9fa !important; /* Lighter text for links */
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffdd57 !important; /* Highlight color on hover */
+        }
+
+        /* Content styling */
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Welcome User</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upatientreportsrequst">Document Request</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/udocstatus">Approved List</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+       <h1>Welcome to Your Hospital!</h1>
+<p>We are committed to providing the highest quality of care to all our patients, combining advanced medical technologies with compassionate healthcare services.</p>
+
+<h2>Our Services</h2>
+<ul>
+    <li><strong>General Medicine:</strong> Comprehensive care for a wide range of medical conditions.</li>
+    <li><strong>Emergency Services:</strong> 24/7 emergency care with rapid response and expert treatment.</li>
+    <li><strong>Specialized Clinics:</strong> Expert care in cardiology, neurology, orthopedics, and more.</li>
+    <li><strong>Diagnostic Imaging:</strong> State-of-the-art imaging services including MRI, CT scans, and X-rays.</li>
+    <li><strong>Laboratory Services:</strong> Full-service lab for accurate and timely test results.</li>
+    <li><strong>Outpatient Services:</strong> Day procedures and consultations without the need for overnight stays.</li>
+</ul>
+
+<h2>Patient Information</h2>
+<p>We are dedicated to making your hospital experience as comfortable and stress-free as possible. Below is some useful information for your visit:</p>
+<ul>
+    <li><strong>Appointments:</strong> Schedule an appointment easily through our online portal or by calling our reception.</li>
+    <li><strong>Visiting Hours:</strong> We welcome visitors daily between 10 AM and 8 PM. Please check specific guidelines for ICU visits.</li>
+    <li><strong>Billing and Insurance:</strong> Our team will assist you with your billing, insurance claims, and payment options.</li>
+    <li><strong>Patient Rights:</strong> We respect your rights as a patient, ensuring confidentiality, informed consent, and compassionate care.</li>
+</ul>
+
+<h2>Why Choose Us?</h2>
+<p>Our hospital is recognized for its excellence in healthcare, thanks to our skilled medical professionals and state-of-the-art facilities:</p>
+<ul>
+    <li><strong>Experienced Medical Staff:</strong> Our doctors, nurses, and specialists are leaders in their fields.</li>
+    <li><strong>Advanced Technology:</strong> We invest in the latest medical technologies for accurate diagnoses and effective treatments.</li>
+    <li><strong>Patient-Centered Care:</strong> Your health and well-being are our top priority, and we tailor our services to meet your needs.</li>
+    <li><strong>Comfort and Care:</strong> Modern, clean facilities designed with patient comfort in mind.</li>
+</ul>
+
+<h2>Contact Us</h2>
+<p>If you have any questions or need further assistance, please don't hesitate to reach out to us:</p>
+<ul>
+    <li><strong>Phone:</strong> +123-456-7890</li>
+    <li><strong>Email:</strong> contact@yourhospital.com</li>
+    <li><strong>Address:</strong> 123 Main Street, City, Country</li>
+</ul>
+<p>Thank you for choosing us as your healthcare provider. We look forward to taking care of you and your family!</p>
+
+    </div>
+
+    <!-- Add Bootstrap JS (optional for dropdowns and toggling the navbar) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-dJqvoeXBbam1/UXG29w1L6w6Y9ZV/6g2UeuTkG6bRo2+j5gV0jo1g8hYgDTNB" crossorigin="anonymous"></script>
+</body>
+</html>

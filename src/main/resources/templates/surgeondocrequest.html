@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+<style>
+	
+	/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Action links */
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.action-link:hover {
+    color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Requests</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                  
+                    <th>Email</th>
+                  
+                    <th>Document Id</th>
+                    
+                        <th>Description</th>
+                      <th>Surgeon Id</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Iterate over doctorRequests and display each request -->
+                <tr th:each="request : ${filter}">
+                    <td th:text="${request.pid}"></td>
+                 
+                    <td th:text="${request.pemail}"></td>
+                    <td th:text="${request.docid}"></td>
+                    <td th:text="${request.msg}"></td>
+                          <td th:text="${request.sid}"></td>
+                  <!--<td th:text="${request.image}">><a href=""></a>view</td>-->
+                  
+                 <!--  <td>
+                       <a th:href="@{'/viewPDF/' + ${request.image}}" target="_blank" class="action-link"><button  class="btn btn-danger">view</button> </a>
+                    </td>-->
+                    </td>
+                  
+                    <td>
+                      <a th:href = "@{/saccept/{id}(id=${request.id})}" class="action-link">Accept</a>
+                        <a th:href="@{/sreject/{id}(id=${request.id})}" class="action-link">Reject</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

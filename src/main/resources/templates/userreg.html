@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login and Signup</title>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: url("https://image.freepik.com/free-photo/green-leaf-forest_1150-12333.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(34, 34, 34, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      overflow: hidden;
+      width: 800px;
+      max-width: 100%;
+    }
+
+    .form-container {
+      padding: 50px;
+      background-color: #fff;
+      flex: 1;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .form-container.sign-up-container {
+      transform: translateX(100%);
+    }
+
+    .container.right-panel-active .form-container.sign-up-container {
+      transform: translateX(0%);
+    }
+
+    .container.right-panel-active .form-container.sign-in-container {
+      transform: translateX(-100%);
+    }
+
+    .sign-in-container {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      left: 0;
+    }
+
+    .sign-up-container {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      right: 0;
+    }
+
+    .overlay-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      transition: transform 0.6s ease-in-out;
+      z-index: 100;
+    }
+
+    .container.right-panel-active .overlay-container {
+      transform: translateX(-100%);
+    }
+
+    .overlay {
+      background: rgba(34, 34, 34, 0.85);
+      color: #fff;
+      position: absolute;
+      left: -100%;
+      height: 100%;
+      width: 200%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .container.right-panel-active .overlay {
+      transform: translateX(50%);
+    }
+
+    .overlay-panel {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .overlay-left {
+      transform: translateX(-20%);
+    }
+
+    .container.right-panel-active .overlay-left {
+      transform: translateX(0);
+    }
+
+    .overlay-right {
+      right: 0;
+      transform: translateX(0);
+    }
+
+    .container.right-panel-active .overlay-right {
+      transform: translateX(20%);
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      margin: 20px 0 30px;
+    }
+
+    button {
+      border-radius: 20px;
+      border: 1px solid #ff4b2b;
+      background-color: #ff4b2b;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    .ghost {
+      background-color: transparent;
+      border-color: #ffffff;
+    }
+
+    form {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      padding: 0 50px;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    input {
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+	
+		<!--signup-->
+	
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="/userreg" method="post">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Name"  name="name"/>
+        <input type="email" placeholder="Email" name="email" />
+        <input type="password" placeholder="Password" name="password" />
+        <input type="text" placeholder="Age" name="age" />
+        <input type="tel" placeholder="Secret id" name="contact" />
+        <input type="text" placeholder="User ID" name="userid" />
+          <button type="submit">Register</button>
+      </form>
+    </div>
+    
+    	<!--signnin-->
+    
+    <div class="form-container sign-in-container">
+      <form action="/uslogin" method="post">
+        <h1>Sign in</h1>
+        <input type="email" placeholder="Email" name="email" />
+        <input type="password" placeholder="Password" name="password" />
+        <button  type="submit">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+      container.classList.remove("right-panel-active");
+    });
+  </script>
+</body>
+</html>

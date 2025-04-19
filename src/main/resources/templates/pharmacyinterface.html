@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Department</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(135, 131, 116); /* Green color scheme */
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        header h1 {
+            color: white;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #E8F5E9; /* Light green hover color */
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #333;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        
+        /* Pharmacist Cards */
+        .pharmacist-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
+        }
+        
+        .pharmacist-card img {
+            width: 200px; /* Set width of the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .pharmacist-card h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .pharmacist-card p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        /* Contact Form */
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+             text-align: center;
+        }
+        
+        form input, form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        form button {
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        form button:hover {
+            background-color: #388E3C; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pharmacy Department</h1>
+            <nav>
+                <ul>
+                    <li><a href="/ppatientreportsrequst">Patient Reports</a></li>
+                    <li><a href="/pdocstatus">Document Request</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#contact">Patient Details</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our Pharmacy Department, where we strive to provide exceptional pharmaceutical care tailored to your needs.</p>
+            <p>Our dedicated team of pharmacists is committed to ensuring the highest standards of healthcare and customer satisfaction.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Prescription Filling</li>
+                <li>Medication Therapy Management</li>
+                <li>Over-the-Counter Products</li>
+                <li>Health and Wellness Consultations</li>
+            </ul>
+        </section>
+        
+        <section id="team">
+            <h2>Meet Our Pharmacists</h2>
+            <div class="pharmacist-card">
+                <img src="https://images.pexels.com/photos/19471013/pexels-photo-19471013/free-photo-of-young-pharmacist-in-drugstore.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Pharmacist 1">
+                <h3>Dr. Sarah Johnson</h3>
+                <p>Specialty: Clinical Pharmacy</p>
+            </div>
+            <div class="pharmacist-card">
+                <img src="https://t3.ftcdn.net/jpg/04/71/09/58/360_F_471095837_zlSqukKQg1HE63Ta5NhOxK4ggrgjtv0o.jpg" alt="Pharmacist 2">
+                <h3>Dr. Michael Brown</h3>
+                <p>Specialty: Community Pharmacy</p>
+            </div>
+        </section>
+        
+         <!-- <section id="contact">
+            <h2>Patient Details:</h2>
+            <form action="/submit-report" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Patient id" required>
+                <input type="email" name="email" placeholder="Patient Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="file" name="report" accept=".pdf" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </section> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology Department</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2196F3; /* Blue color scheme */
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #E3F2FD; /* Light blue hover color */
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Doctor Cards */
+        .doctor-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center; /* Center align content */
+        }
+
+        .doctor-card img {
+            width: 100%; /* Ensure image width is 100% of container */
+            max-width: 300px; /* Limit maximum width of the image */
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: block; /* Ensure image is a block element for proper alignment */
+            margin: 0 auto; /* Center align image horizontally */
+        }
+
+        .doctor-card h3 {
+            color: #333;
+        }
+
+        .doctor-card p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Contact Form */
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #388E3C; /* Darker green on hover */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Radiology Department</h1>
+            <nav>
+                <ul>
+                <li><a href="/patientreportsrequsttt">Patient Reports</a></li>
+                    <li><a href="/rdocstatus">Document Request</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#contact">Patient Details</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to our Radiology Department, where we utilize state-of-the-art imaging technologies to provide accurate diagnostic services.</p>
+            <p>Our team of dedicated radiologists and technicians ensures patient comfort and safety while delivering timely and precise medical imaging.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>X-ray Imaging</li>
+                <li>CT Scans</li>
+                <li>MRI Scans</li>
+                <li>Ultrasound</li>
+            </ul>
+        </section>
+        
+        <section id="doctors">
+            <h2>Our Radiologists</h2>
+            <div class="doctor-card">
+                <img src="https://media.gettyimages.com/id/1198329183/photo/young-adult-radiologist-smiles-while-standing-next-to-ct-machine.jpg?s=612x612&w=gi&k=20&c=hHsbBtbVO61xnuWFflWah7AE1q-JTlcCeknLQXcxBu4=" alt="Radiologist 1">
+                <h3>Dr. John Smith</h3>
+                <p>Specialty: Diagnostic Radiology</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://t4.ftcdn.net/jpg/01/36/18/75/360_F_136187566_ZTi7eGcnokBJXcnASitNM1klkNW7GGFg.jpg" alt="Radiologist 2">
+                <h3>Dr. Emily Johnson</h3>
+                <p>Specialty: Interventional Radiology</p>
+            </div>
+        </section>
+        
+        <!-- <section id="contact">
+            <h2>Patient Details:</h2>
+            <form action="/submit-report" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" placeholder="Patient id" required>
+                <input type="email" name="email" placeholder="Patient Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="file" name="report" accept=".pdf" required>
+                <button type="submit">Submit Report</button>
+            </form>
+        </section> -->
+    </div>
+</body>
+</html>

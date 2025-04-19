@@ -1,0 +1,188 @@
+<!--
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Upload Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .preview {
+        margin-top: 20px;
+    }
+    .preview img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Upload and Preview Image</h1>
+    <form action="/keysubmitted"   method="post">
+
+<input type="text" class="modal-input" name="skey"  placeholder="Enter Your Email Id Here"/>
+
+<input type="text" class="modal-input" name="pid" placeholder="Enter Your Email Id Here" th:value="${patientId}"/>
+
+
+<input type="text" class="modal-input" name="pemail" placeholder="Enter Your Email Id Here" th:value="${email}"/>
+
+<input type="text" class="modal-input" name="msg" placeholder="Enter Your Email Id Here"  th:value="${msg}"/>
+
+<input type="text" class="modal-input" name="docid" "Enter Your Email Id Here"  th:value="${docId}"/>
+
+
+<input type="text" class="modal-input" name="sid" placeholder="Enter Your Staff Id Here"  "/>
+
+
+
+
+
+
+
+<input type="submit" class="modal-submit-btn" value="Submit"/>
+</form>
+    <div class="preview" id="imagePreview">
+        <p>No image selected</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+        const preview = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Selected Image">`;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = `<p>No image selected</p>`;
+        }
+    });
+</script>
+</body>
+</html>
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Upload Form</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+    h1 {
+        color: #333333;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-input {
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: calc(100% - 22px); /* Account for padding and border */
+    }
+    .modal-submit-btn {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .modal-submit-btn:hover {
+        background-color: #45a049;
+    }
+    .preview {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+    .preview img {
+        max-width: 100%;
+        height: auto;
+    }
+    .preview p {
+        color: #888888;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Upload and Preview Image</h1>
+    <form action="/keysubmitted" method="post">
+        <input type="text" class="modal-input" name="skey" placeholder="Enter Department Secret key" required />
+        <input type="text" class="modal-input" name="pid" placeholder="Enter Your Email Id Here" th:value="${patientId}" required />
+        <input type="text" class="modal-input" name="pemail" placeholder="Enter Your Email Id Here" th:value="${email}" required />
+        <input type="text" class="modal-input" name="msg" placeholder="Enter Your Email Id Here" th:value="${msg}" required />
+        <input type="text" class="modal-input" name="docid" placeholder="Enter Your Email Id Here" th:value="${docId}" required />
+        <input type="text" class="modal-input" name="sid" placeholder="Enter Your Staff Id Here" required />
+      
+        <input type="submit" class="modal-submit-btn" value="Submit" />
+    </form>
+  
+</div>
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+        const preview = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.innerHTML = `<img src="${e.target.result}" alt="Selected Image">`;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.innerHTML = `<p>No image selected</p>`;
+        }
+    });
+</script>
+</body>
+</html>
